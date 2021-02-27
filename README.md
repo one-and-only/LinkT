@@ -1,0 +1,2 @@
+# LinkT
+My first cryptocurrency
