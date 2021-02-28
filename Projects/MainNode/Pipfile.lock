@@ -1,0 +1,29 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "1bcb3b39ee36411b6aca6e179378dc7ccece634b8f4583ca593ee41529cdc77d"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "Flask": "1.1.2",
+            "Flask-MySQLdb": "0.2.0",
+            "Jinja2": "2.11.3",
+            "MarkupSafe": "1.1.1",
+            "Werkzeug": "1.0.1",
+            "click": "7.1.2",
+            "itsdangerous": "1.1.0",
+            "mysqlclient": "2.0.3",
+            "passlib": "1.7.4",
+            "python_version": "3.9"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {},
+    "develop": {}
+}

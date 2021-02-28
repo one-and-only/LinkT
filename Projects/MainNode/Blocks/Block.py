@@ -7,14 +7,16 @@ class Block:
     block_data = ""
     block_hash = ""
     block_previous_hash = ""
-    block_nonce = 0  # nonce of the block. Always start at 0.
+    block_nonce = 0
 
     # initialize Block object
-    def __init__(self, data, block_number=0, block_previous_hash="0" * 128):  # SHA-512 hex hash length is 128 chars
-        self.block_data = data  # block data
+    # SHA-512 hash length is 128 characters in hex
+    def __init__(self, block_data, block_number=0, block_previous_hash="0" * 128, block_nonce=0):
+        self.block_data = block_data  # block data
         self.block_previous_hash = block_previous_hash  # hash of the previous block
         self.block_number = block_number  # block number
         self.block_hash = self.hash()  # generate hash of the block
+        self.block_nonce = block_nonce  # nonce of the block. Always start at 0
 
     # return the new hash of the block
     def hash(*args):
