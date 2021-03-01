@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1bcb3b39ee36411b6aca6e179378dc7ccece634b8f4583ca593ee41529cdc77d"
+            "sha256": "47a79a93aa9339a60aaee45b3795351c84d3e6a2062959b2ee34d9a0ebac5808"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -9,6 +9,7 @@
             "Flask-MySQLdb": "0.2.0",
             "Jinja2": "2.11.3",
             "MarkupSafe": "1.1.1",
+            "WTForms": "2.3.3",
             "Werkzeug": "1.0.1",
             "click": "7.1.2",
             "itsdangerous": "1.1.0",

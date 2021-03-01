@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+
+<style>
+    .center-form {
+      margin: auto;
+      width: 50%;
+      padding: 25px;
+    }
+</style>
+
+<h1 align="center">Sign in</h1>
+
+<div class="center-form">
+    {% include 'includes/_messages.html' %}
+    <form action="" method="POST">
+      <div class="mb-3">
+        <label for="registerUsername" class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" id="registerUsername" required>
+      </div>
+      <div class="mb-3">
+        <label for="registerPassword" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="registerPassword" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
+
+{% include 'footer.html' %}

@@ -1,0 +1,41 @@
+{% include 'header.html' %}
+
+<style>
+    .center-form {
+      margin: auto;
+      width: 50%;
+      padding: 25px;
+    }
+</style>
+
+<h1 align="center">Registration</h1>
+
+<div class="center-form">
+    {% include 'includes/_messages.html' %}
+    <form action="" method="POST">
+      <div class="mb-3">
+        <label for="registerName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="registerName" aria-describedby="Full Name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="registerEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="registerEmail" name="email" required>
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="registerUsername" class="form-label">Username</label>
+        <input type="text" class="form-control" id="registerUsername" name="username" required>
+      </div>
+      <div class="mb-3">
+        <label for="registerPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="registerPassword" name="password" required>
+      </div>
+      <div class="mb-3">
+        <label for="confirmRegisterPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmRegisterPassword" name="confirm_password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+</div>
+
+{% include 'footer.html' %}

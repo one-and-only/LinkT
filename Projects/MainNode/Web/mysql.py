@@ -17,6 +17,7 @@ class Table:
     # specify the table name and columns
     # EXAMPLE table:
     #                                   blockchain
+    #
     # block_number    block_hash    block_previous_hash   block_data    block_nonce
     #   -data-          -data-             -data-           -data-         -data-
     #
@@ -112,7 +113,7 @@ def is_new_table(table_name):
 # check if user already exists
 def is_new_user(username):
     # access the users table and get all values from column "username"
-    users = Table("users", "name", "email", "username", "password")
+    users = Table("users", "username", "name", "email", "password")
     data = users.get_all_rows()
     usernames = [user.get('username') for user in data]
 
