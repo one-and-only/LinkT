@@ -14,3 +14,8 @@ class RegisterForm(Form):
         ]
     )
     confirm_password = PasswordField("Confirm Password")
+
+
+class SendLinkTForm(Form):
+    send_to_address = StringField('Wallet Address', [validators.Length(min=32, max=32)])
+    amount = StringField("Amount", [validators.Length(min=1, max=64)])

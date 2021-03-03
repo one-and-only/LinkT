@@ -5,10 +5,8 @@ class Blockchain:
     difficulty = 4
 
     # initialize Blockchain object
-    def __init__(self, blockchain=None):
-        if blockchain is None:
-            blockchain = []
-        self.blockchain = blockchain
+    def __init__(self):
+        self.blockchain = []
 
     # add a block to the blockchain
     def add_block(self, block):
@@ -23,7 +21,7 @@ class Blockchain:
         try:
             block.block_previous_hash = self.blockchain[-1].hash()
         except IndexError:
-            pass
+            block.block_previous_hash = "0" * 128  # Hash length in hex for SHA-512 is 128 characters
 
         while True:
             block.block_hash = block.hash()
