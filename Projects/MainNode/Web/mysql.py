@@ -255,11 +255,16 @@ def sync_blockchain(blockchain):
     )
     blockchain_sql.delete_all_rows("blockchain")
 
+    """
+    I don't why, but the data somehow gets switched,
+    so the order of the block elements is weird, but
+    it works as intended when switched.
+    """
     for block in blockchain.blockchain:
         blockchain_sql.insert_row(
-            str(block.block_number),
+            block.block_data,
             block.hash(),
             block.block_previous_hash,
-            block.block_data,
+            block.block_number,
             block.block_nonce
         )
