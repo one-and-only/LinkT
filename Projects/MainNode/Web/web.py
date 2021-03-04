@@ -160,16 +160,16 @@ def send():
     balance = get_balance(session.get('username'), "username")
 
     if request.method == "POST":
-        """try:"""
-        send_linkt(
-            sender=session.get("walletAddress"),
-            recipient=request.form['recipientAddress'],
-            amount=request.form['amount']
-        )
+        try:
+            send_linkt(
+                sender=session.get("walletAddress"),
+                recipient=request.form['recipientAddress'],
+                amount=request.form['amount']
+            )
 
-        flash("LinkT has been sent!", "success")
-        """except Exception as e:
-            flash(str(e), "danger")"""
+            flash("LinkT has been sent!", "success")
+        except Exception as e:
+            flash(str(e), "danger")
 
         return redirect(url_for('send'))
 
